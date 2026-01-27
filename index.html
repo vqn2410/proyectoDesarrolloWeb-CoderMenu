@@ -1,52 +1,465 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <!-- CSS Propio -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+    <!-- Imagenes creadas con Gemini
+    https://gemini.google.com/share/ac91d2eacfde -->
+
+    <!-- Postimages => Imagenes creadas con Gemini cagadas en la web
+    https://postimg.cc/gallery/5yPN7wC -->
 </head>
+
 <body>
 
-<header>
-    <h1>Mi Sitio Web</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="pages/nosotros.html">Nosotros</a>
-        <a href="pages/contacto.html">Contacto</a>
-    </nav>
-</header>
+    <header>
+        <div class="contenedor contenedor-navegacion">
+            <a href="index.html" class="logo">Coder<span class="titulo-destacado">Menu</span></a>
 
-<main>
-    <section>
-        <h2>Bienvenid@s</h2>
-        <p>
-            Este sitio web fue realizado como trabajo práctico utilizando HTML y CSS.
-        </p>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-        <img 
-            src="img/img1.jpeg" width="200px"
-            alt="Personas trabajando con computadoras">
-    </section>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li class="enlace-navegacion"><a href="index.html" class="active">Inicio</a></li>
+                    <li class="enlace-navegacion"><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li class="enlace-navegacion"><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="carrito">
+                <a href="#">
+                    🛒$0.00 ARS
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <section>
-        <h2></h2>
-        <p>Ejemplo de video cargado desde un link externo.</p>
+    <main class="contenedor contenido-principal">
+        <div class="contenedor-titulo-bienvenidos">
+            <section>
+                <h1 class="tarjeta-bienvenido">Bienvenid@s a Coder<span class="titulo-destacado">Menu</span></h1>
+            </section>
+        </div>
+        <div>
+            <section class="tarjeta cuadricula-img">
+                <p>"Lo que mas te gusta en un solo lugar"</p>
+            </section>
+        </div>
+        <div class="contenedor-titulo-pregunta">
+            <h2>¿Que vamos a comer hoy?</h2>
+            <p>Elige entre nuestras deliciosas opciones</p>
+            <div class="contenedor-boton-categorias">
+                <ul class="lista-categorias">
+                    <li><a href="#coder-burger" class="boton-categoria">Hamburguesas</a></li>
+                    <li><a href="#coder-pastas" class="boton-categoria">Pastas</a></li>
+                    <li><a href="#coder-pizza" class="boton-categoria">Pizza</a></li>
+                    <li><a href="#coder-empanadas" class="boton-categoria">Empanadas</a></li>
+                    <li><a href="#coder-pasteleria" class="boton-categoria">Pastelería</a></li>
+                    <li><a href="#coder-bebidas" class="boton-categoria">Bebidas</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- sección de CoderPastas -->
+        <div class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Pastas</span></h2>
+        </div>
 
-        <video controls width="320">
-            <source 
-                src="vid/video1.mp4"
-                type="video/mp4">
-        </video>
-    </section>
-</main>
+        <!-- Seccion CoderPastas -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section id="coder-pastas" class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/tCVvMjGD/Coder_Pastas_Canelones.jpg"
+                        alt="CoderPastas - Canelones con salsa a elección">
+                    <h3>Canelones</h3>
+                    <p>Canelones de ricota, verdura o carne con salsa a elección y queso parmesano.</p>
+                    <hr>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione el relleno</option>
+                        <option value="1">Verdura, ricota, jamon y nuez</option>
+                        <option value="2">Carne</option>
+                        <option value="3">Ricota y verdura</option>
+                        <option value="4">Pollo</option>
+                    </select>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione la salsa</option>
+                        <option value="1">Salsa de tomate</option>
+                        <option value="2">Salsa de crema</option>
+                        <option value="3">Salsa de champiñones</option>
+                        <option value="4">Salsa de verdeo</option>
+                    </select>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/bN2VBhfm/Coder_Pastas_fideos.jpg"
+                        alt="CoderPastas - Spaghetti con albóndigas caseras, salsa de tomate y queso parmesano.">
+                    <h3>Pasta fresca a elección</h3>
+                    <p>Pasta fresca a elección con salsa a elección y queso parmesano.</p>
+                    <hr>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione la pasta</option>
+                        <option value="1">Spaghetti</option>
+                        <option value="2">Fettuccine</option>
+                        <option value="3">Pappardelle</option>
+                        <option value="4">Ñoquis</option>
+                    </select>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione la salsa</option>
+                        <option value="1">Salsa de tomate</option>
+                        <option value="2">Salsa de crema</option>
+                        <option value="3">Salsa de champiñones</option>
+                        <option value="4">Salsa de verdeo</option>
+                    </select>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/qMCD5THb/Coder_Pastas_ravioles.jpg"
+                        alt="CoderPastas - Pastas rellenas con salsa a elección y queso parmesano.">
+                    <h3>Pasta rellenas a elección</h3>
+                    <p>Pasta rellenas a elección con salsa a elección y queso parmesano.</p>
+                    <hr>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione la pasta</option>
+                        <option value="1">Ravioles de verdura</option>
+                        <option value="2">Ravioles de carne</option>
+                        <option value="3">Ravioles de ricota</option>
+                        <option value="4">Sorrentinos de jamon y queso</option>
+                        <option value="5">Sorrentinos de calabaza</option>
+                        <option value="6">Sorrentinos de espinaca y ricota</option>
+                    </select>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione la salsa</option>
+                        <option value="1">Salsa de tomate</option>
+                        <option value="2">Salsa de crema</option>
+                        <option value="3">Salsa de champiñones</option>
+                        <option value="4">Salsa de verdeo</option>
+                    </select>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+        <!-- sección de CoderBurgers -->
+        <div id="coder-burger" class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Burger</span></h2>
+        </div>
+        <!-- sección de CoderBurgers -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/3JDfcTHM/Coder_Burger.jpg"
+                        alt="CoderBurge - Hamburquesa doble cuarto de libra con chedar, cebolla, bacon, salsa SpecialCoder con papas fritas">
 
-<footer>
-    <p>© 2025 - NVproductions by Nicolas Vergara</p>
-    <a href="https://www.facebook.com">Facebook</a> |
-    <a href="https://www.twitter.com">Twitter</a> |
-    <a href="https://www.instagram.com">Instagram</a>
-</footer>
+                    <h3>Cuarto de libra</h3>
+                    <p>Hamburguesa doble cuarto de libra con cheddar, cebolla, bacon, salsa SpecialCoder con papas
+                        fritas.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
 
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/vH62Nsw7/Coder_Burger_triple.jpg"
+                        alt="CoderBurge - Hamburquesa triple cuarto de libra con chedar, cebolla, bacon, salsa SpecialCoder con papas fritas">
+                    <h3>Triple de libra</h3>
+                    <p>Hamburguesa triple cuarto de libra con cheddar, cebolla, bacon, salsa SpecialCoder con papas
+                        fritas.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/6q5ddCLQ/Coder-Burguer-nv.jpg"
+                        alt="CoderBurge - Hamburgesa triple cuarto de libra con cheddar,Picante de jalapeño, cebolla, bacon, con papas.">
+                    <h3>Triple Cuarto de libra <span class="destacar-text-color-rojo">Turbo</span></h3>
+                    <p>Hamburguesa triple cuarto de libra con cheddar,Picante de jalapeño, cebolla, bacon, con papas.
+                    </p>
+
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+
+        <!-- sección de CoderPizza -->
+        <div id="coder-pizza" class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Pizza</span></h2>
+        </div>
+
+        <!-- Seccion CoderPizza -->
+        <!-- sección de CoderBurgers -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/15N7jQ1q/Coder_Pizza_Jy_M.jpg"
+                        alt="CoderPizza - Pizza con queso, jamon y Morrones">
+
+                    <h3>Pizza Jamon y Morrones</h3>
+                    <p>Pizza con queso muzzarella, jamon y Morrones.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/vH62Nswf/Coderpizza_muzza.jpg"
+                        alt="CoderPizza - Pizza con queso muzzarella">
+                    <h3>Pizza Muzzarella</h3>
+                    <p>Pizza con queso muzzarella.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/WbJYHvcr/Coderpizza_peperoni.jpg"
+                        alt="CoderPizza - Pizza con queso muzzarella, peperoni">
+                    <h3>Pizza Peperoni</h3>
+                    <p>Pizza con queso muzzarella, peperoni.</p>
+
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+        <!-- sección de CoderEmpanadas -->
+        <div id="coder-empanadas" class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Empanadas</span></h2>
+        </div>
+        <!-- sección de CoderEmpanadas -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/zDQP7f6n/Coder_Emapanadas_JYQ.jpg"
+                        alt="CoderEmpanada - Empanada con queso, jamon y Morrones">
+
+                    <h3>Empanada J y Q</h3>
+                    <p>Empanada de jamon y queso.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/Pf7Fyq9z/Coder_Empanadas_carne.jpg"
+                        alt="CoderEmpanada - Empanada de carne">
+                    <h3>Empanada de Carne</h3>
+                    <p>Empanada de carne cortada a cuchillo.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/wxrb2BZ5/Coder_Empanadas_pollo.jpg"
+                        alt="CoderEmpanada - Empanada de pollo">
+                    <h3>Empanada de Pollo</h3>
+                    <p>Empanada de pollo.</p>
+
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+        <!-- sección de Bebidas -->
+        <div id="coder-bebidas" class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Bebidas</span></h2>
+        </div>
+        <!-- sección de CoderBebidas -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/4xHfdvx3/Agua.png" alt="CoderBebida - Agua de 1 litro">
+
+                    <h3>Agua</h3>
+                    <p>Agua de 1 litro.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/j54dTsdW/Coder_Cola.png" alt="CoderBebida - Cola de 1 litro">
+                    <h3>Bebida Cola</h3>
+                    <p>Bebida sabor Cola de 1 litro.</p>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/mDy24b2F/Coder_Wine.png" alt="CoderBebida - Vino de 1 litro">
+                    <h3>Bebida Vino</h3>
+                    <p>Vino de 1 litro.</p>
+
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+        <!-- sección Pasteleria -->
+        <div id="coder-pasteleria" class="contenedor-titulo-seccion">
+            <h2>Coder<span class="destacados">Pasteleria</span></h2>
+        </div>
+        <!-- sección de CoderPasteleria -->
+        <div class="cuadricula cuadricula-productos ">
+            <!-- Primer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/8kYn4C9f/Coder_Pasteleria_matilda.jpg"
+                        alt="CoderPasteleria - Matilda">
+
+                    <h3>Torta Matilda</h3>
+                    <p>un bizcocho húmedo y denso, el pan y betún elaborados con chocolate amargo que conserve su color
+                        y sabor intensos, y un acabado rústico y casero</p>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione el sabor</option>
+                        <option value="1">Chocolate Dark</option>
+                        <option value="2">Chocolate White</option>
+
+                    </select>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Segundo producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/G3fSKpV8/Coder_Lemonpie.jpg" alt="CoderPasteleria - Lemonpie">
+                    <h3>Tartas</h3>
+                    <p>Tarta frescas y equilibrada, con base y crema hechas con amor, que conserve color y
+                        acidez, y un terminado simple y bien casero.</p>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione el sabor</option>
+                        <option value="1">Lemon Pie</option>
+                        <option value="2">Kie lime pie</option>
+                        <option value="3">Frutos rojos</option>
+
+                    </select>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+
+            <!-- Tercer producto -->
+            <section class="tarjeta-productos">
+                <div class="contenedor-producto">
+                    <img src="https://i.postimg.cc/nVWw2LgX/Coder_Helados.jpg" alt="CoderPasteleria - Helados">
+                    <h3>Helados</h3>
+                    <p>Un helado cremoso, un postre frío y equilibrado, con base y crema hechas de leche natural que
+                        conserve color y dulzura intensos, y un terminado simple y bien casero.</p>
+                    <br>
+                    <select class="form-select border-secondary" aria-label="Default select example">
+                        <option selected>Seleccione el sabor</option>
+                        <option value="1">Vainilla</option>
+                        <option value="2">Chocolate</option>
+                        <option value="3">Frutos rojos</option>
+                        <option value="4">Menta granizada</option>
+                        <option value="5">Dulce de leche granizado</option>
+                        <option value="6">Tramontana</option>
+                        <option value="7">Chocolate del sur</option>
+                    </select>
+                    <hr>
+                </div>
+                <button class="boton-comprar">Comprar</button>
+                <button class="boton-agregar">Agregar al carrito</button>
+            </section>
+            <div class="contenedor-boton">
+                <button class="boton-ver-mas">Ver más</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>© 2025 - NVproductions by Nicolas Vergara</p>
+            <div class="enlaces-footer">
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.twitter.com">Twitter</a>
+                <a href="https://www.instagram.com">Instagram</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
