@@ -20,9 +20,15 @@ El archivo principal del proyecto es `index.html`, donde se desarrolla la estruc
 
 ## 🛠️ Tecnologías utilizadas
 - HTML5  
+- CSS  
+- Bootstrap  
 
 ## 🎯 Objetivo
 Poner en práctica los conceptos fundamentales del desarrollo web, sentando las bases para futuros proyectos más complejos que incorporen estilos, diseño responsivo e interactividad.
+
+## ℹ️ Aclaración
+Este proyecto fue desarrollado utilizando **HTML, CSS y Bootstrap**.  
+Al momento de la entrega, **aún no se han incorporado contenidos de JavaScript, React ni desarrollo Backend** dentro de la cursada.
 
 ---
 
