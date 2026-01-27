@@ -592,6 +592,22 @@ header {
     display: block;
 }
 
+.contenedor-sucursales {
+    margin-top: var(--espaciado);
+    padding: var(--espaciado);
+    border-radius: var(--radio-borde);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-total-black);
+}
+
 /* Formulario */
 .grupo-formulario {
     margin-bottom: 15px;
