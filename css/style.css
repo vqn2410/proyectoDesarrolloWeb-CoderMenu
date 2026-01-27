@@ -389,6 +389,34 @@ header {
     color: var(--color-total-black);
 }
 
+.tarjeta-sucursal {
+    padding: var(--espaciado);
+    border-radius: var(--radio-borde);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-total-black);
+    background-color: var(--blanco);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-sucursal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-secundario);
+}
+
+.sucursal-destacada {
+    color: var(--color-secundario);
+    text-decoration: underline var(--color-primario);
+}
+
 .tarjeta-bienvenido {
     text-align: center;
     font-size: 3rem;
