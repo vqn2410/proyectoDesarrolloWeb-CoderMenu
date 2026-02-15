@@ -6,7 +6,7 @@ Este repositorio corresponde a una **entrega académica** realizada en el marco 
 - **Institución:** Coder House  
 - **Carrera:** Desarrollo Web  
 - **Comisión:** 87925  
-- **Entrega:** Proyecto práctico / Segunda entrega  
+- **Entrega:** Proyecto práctico
 
 ## 🧩 Descripción del proyecto
 El proyecto forma parte de las actividades evaluativas del curso y tiene como objetivo aplicar los conocimientos adquiridos en las primeras unidades, incluyendo:
