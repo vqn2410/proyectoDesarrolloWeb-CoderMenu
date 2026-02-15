@@ -1,0 +1,145 @@
+// Estilos de Páginas Específicas
+
+// HOME
+.contenedor-titulo-bienvenidos {
+    text-align: center;
+    margin: $espacio-grande 0;
+
+    h1 {
+        font-size: 2rem;
+
+        .titulo-destacado {
+            color: $color-secundario;
+        }
+    }
+}
+
+.lista-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: $espacio-medio 0;
+
+}
+
+.contenedor-titulo-seccion {
+    @include titulo-seccion;
+    font-size: 1.2rem;
+    background-color: $color-secundario;
+    color: $color-negro;
+
+    .destacados {
+        color: $color-blanco;
+        display: inline-block;
+        padding: 4px 10px;
+        border: 2px solid $color-secundario;
+        border-radius: 6px;
+        background-color: $color-peligro;
+    }
+}
+
+.contenedor-titulo-pregunta {
+    @include titulo-seccion;
+    font-size: 1.2rem;
+    background-color: $color-negro;
+    color: white;
+
+    h2 {
+        font-family: $fuente-secundaria;
+        font-weight: none;
+        color: white;
+    }
+}
+
+
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: auto;
+
+    .boton-ver-mas {
+        display: inline-block;
+        width: 30%;
+
+        @include mobile {
+            width: 100%; // Mobile full width
+        }
+    }
+}
+
+
+
+
+// NOSOTROS
+.video-fondo {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contenido-principal-nosotros {
+    margin-bottom: $espacio-grande;
+    position: relative; // Para que el texto flote si es necesario, o bloque simple
+
+    // Estilo "Beginner": Texto debajo del video, no flotando complicado
+    // Pero el HTML tiene estructura para overlay. Vamos a hacerlo simple.
+
+    .contenido-sobre-video {
+        background-color: rgba(0, 0, 0, 0.6); // Fondo oscuro semitransparente
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: -50px; // Hack para subirlo un poco sobre el video
+        position: relative;
+        z-index: 10;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mobile {
+            width: 95%; // Mobile width adjustment
+            margin-top: -20px; // Less overlap on mobile
+        }
+    }
+}
+
+// CONTACTO
+.contenedor-imagen-contacto {
+    text-align: center;
+
+    img {
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #ccc;
+    }
+}
+
+.contenedor-sucursales {
+    text-align: center;
+    margin-top: 50px;
+
+    .tarjeta-sucursal {
+        text-align: left;
+
+        h3 {
+            color: $color-primario;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// Animaciones
+.animacion-fade-in {
+    animation: aparecer 1.5s ease-in;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

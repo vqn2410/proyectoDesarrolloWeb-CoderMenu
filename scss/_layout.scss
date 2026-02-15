@@ -1,0 +1,205 @@
+// Layout General
+
+header {
+    background-color: $color-primario;
+    padding: $espacio-medio 0;
+    color: white;
+
+    .contenedor-navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-family: $fuente-titulos;
+        font-size: 28px;
+        font-weight: bold;
+
+        .titulo-destacado {
+            color: $color-secundario;
+        }
+    }
+
+    .carrito {
+        a {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+nav {
+
+    // DESKTOP
+    .menu-navegacion {
+        display: flex;
+        justify-content: flex-end;
+        gap: $espacio-medio;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                color: $color-blanco;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 10px;
+
+                &:hover,
+                &.active {
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+
+    // TABLET
+    @include tablet {
+        .menu-navegacion {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            flex-direction: row;
+            background-color: $color-secundario;
+            justify-content: space-around;
+            padding: 8px 0;
+            z-index: 1000;
+        }
+
+        .menu-navegacion li a {
+            flex-direction: column;
+            font-size: 12px;
+            color: $color-texto;
+
+            i {
+                font-size: 20px;
+            }
+
+            &.active {
+                color: $color-negro;
+            }
+        }
+    }
+}
+
+
+
+// MOBILE
+@include mobile {
+    .menu-navegacion {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        background-color: $color-secundario;
+        justify-content: space-around;
+        padding: 8px 0;
+        z-index: 1000;
+    }
+
+    .menu-navegacion li a {
+        flex-direction: column;
+        font-size: 12px;
+        color: white;
+
+        i {
+            font-size: 20px;
+        }
+
+        &.active {
+            color: $color-primario;
+        }
+    }
+}
+
+
+// Hamburger Menu Logic (Checkbox Hack)
+.menu-toggle {
+    display: none;
+
+    &:checked~nav .menu-navegacion {
+        display: flex;
+    }
+}
+
+.menu-toggle-label {
+    display: none;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+}
+
+
+footer {
+    background-color: $color-secundario;
+    color: white;
+    text-align: center;
+    padding: $espacio-grande 0;
+    margin-top: $espacio-grande;
+
+    .enlaces-footer {
+        margin-top: $espacio-medio;
+
+        a {
+            margin: 0 10px;
+            color: white;
+
+            &:hover {
+                color: $color-primario;
+            }
+        }
+    }
+}
+
+// Grid Systems
+.cuadricula {
+    display: grid;
+    gap: $espacio-medio;
+}
+
+.cuadricula-productos {
+    grid-template-columns: repeat(3, 1fr); // Desktop 3 columnas fijo
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr); // Tablet 2 columnas
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr; // Mobile 1 columna
+    }
+}
+
+.cuadricula-2 {
+    grid-template-columns: 1fr 1fr;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cuadricula-img {
+    // Para la imagen de bienvenida/frase
+    text-align: center;
+    margin-bottom: $espacio-medio;
+}
