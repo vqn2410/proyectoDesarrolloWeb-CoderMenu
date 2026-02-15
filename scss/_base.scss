@@ -1,0 +1,41 @@
+// Estilos Base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-principal;
+    background-color: $color-fondo;
+    color: $color-texto;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+    margin-bottom: $espacio-medio;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

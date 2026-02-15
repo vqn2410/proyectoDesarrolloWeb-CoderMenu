@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-desarrollo-web",
+  "version": "1.0.0",
+  "description": "Proyecto de Desarrollo Web con SASS y Bootstrap",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:css/style.css",
+    "build-sass": "sass scss/style.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
