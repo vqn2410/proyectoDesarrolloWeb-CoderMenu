@@ -684,7 +684,7 @@ footer .enlaces-footer a:hover {
 }
 footer .contenedor-ws {
   position: fixed;
-  bottom: 50px;
+  bottom: 10px;
   right: 20px;
   z-index: 1000;
 }
@@ -692,6 +692,20 @@ footer .img-ws {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  footer .contenedor-ws {
+    bottom: 90px;
+    right: 10px;
+    z-index: 1000;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  footer .contenedor-ws {
+    bottom: 90px;
+    right: 10px;
+    z-index: 1000;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
