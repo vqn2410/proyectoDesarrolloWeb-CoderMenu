@@ -1,4 +1,3 @@
-// Estilos Base
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     background-color: $color-fondo;
     color: $color-texto;
     line-height: 1.5;
-    padding-top: 100px; // Prevent content overlap with fixed header
+    padding-top: 100px;
 }
 
 h1,

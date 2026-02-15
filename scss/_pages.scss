@@ -100,9 +100,8 @@
 }
 
 .contenido-principal-nosotros {
-    margin-bottom: $espacio-grande * 2; // More space between major sections
+    margin-bottom: $espacio-grande * 2;
 
-    // Default: Video Left, Text Right
     section {
         display: flex;
         align-items: center;
@@ -110,7 +109,7 @@
         flex-direction: row;
 
         @include tablet {
-            flex-direction: column !important; // Force stack regardless of even/odd
+            flex-direction: column !important;
         }
 
         @include mobile {
@@ -118,7 +117,6 @@
         }
     }
 
-    // Alternating Layout: Text Left, Video Right
     &:nth-of-type(even) {
         section {
             flex-direction: row-reverse;
@@ -137,7 +135,7 @@
     .video-fondo {
         width: 50%;
         margin-bottom: 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); // Better shadow
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
 
         @include tablet {
@@ -162,8 +160,8 @@
         border: none;
 
         color: $color-negro;
-        font-family: 'Arial', sans-serif; // Cleaner sans-serif for reading
-        font-size: 1.1rem; // Readable size
+        font-family: 'Arial', sans-serif;
+        font-size: 1.1rem;
         line-height: 1.8;
         text-transform: none;
         font-weight: normal;
@@ -187,7 +185,7 @@
 
         p {
             margin-bottom: 1.5rem;
-            color: #555; // Softer text color
+            color: #555;
         }
     }
 
