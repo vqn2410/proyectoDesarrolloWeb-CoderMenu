@@ -695,6 +695,9 @@ footer .enlaces-footer a:hover {
     opacity: 1;
   }
 }
+footer {
+  margin-bottom: 80px;
+}
 footer .contenedor-ws {
   position: fixed;
   bottom: 10px;
