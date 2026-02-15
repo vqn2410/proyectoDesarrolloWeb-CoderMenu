@@ -4,13 +4,14 @@
 .contenedor-titulo-bienvenidos {
     text-align: center;
     margin: $espacio-grande 0;
-    width: 100%;
+    width: device-width;
 
     h1 {
         font-size: clamp(1.5rem, 5vw, 3rem);
         line-height: 1.2;
         word-wrap: break-word;
         padding: 0 10px;
+        width: device-width;
 
         .titulo-destacado {
             color: $color-secundario;
