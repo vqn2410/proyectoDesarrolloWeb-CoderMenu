@@ -433,6 +433,7 @@ footer .enlaces-footer a:hover {
 .contenedor-titulo-bienvenidos {
   text-align: center;
   margin: 40px 0;
+  width: 100%;
 }
 .contenedor-titulo-bienvenidos h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
