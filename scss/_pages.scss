@@ -132,6 +132,15 @@
         }
     }
 
+    .contenedor-nosotros-carrusel {
+        margin-bottom: $espacio-grande * 2;
+        margin-top: $espacio-grande;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        width: 100%;
+    }
+
+
     .video-fondo {
         width: 50%;
         margin-bottom: 0;
@@ -196,6 +205,12 @@
     .contenido-sobre-video {
         @extend .tarjeta;
     }
+}
+
+.contenedor-nosotros-carrusel {
+    margin-top: $espacio-grande * 2;
+    margin-bottom: $espacio-grande * 2;
+    width: 100%;
 }
 
 // CONTACTO
