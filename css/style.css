@@ -673,8 +673,8 @@ footer .enlaces-footer a:hover {
   }
 }
 footer .img-ws {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -683,17 +683,13 @@ footer .img-ws {
 }
 footer .contenedor-ws {
   position: fixed;
-  bottom: 20px;
+  bottom: 100px;
   right: 20px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-footer .img-ws {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+  transform: translateY(-5px);
 }
 footer .texto-animado {
   opacity: 0;
