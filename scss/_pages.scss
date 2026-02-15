@@ -64,7 +64,7 @@
         width: 30%;
 
         @include mobile {
-            width: 100%; // Mobile full width
+            width: 100%;
         }
     }
 }
@@ -80,28 +80,103 @@
 }
 
 .contenido-principal-nosotros {
-    margin-bottom: $espacio-grande;
-    position: relative; // Para que el texto flote si es necesario, o bloque simple
+    margin-bottom: $espacio-grande * 2; // More space between major sections
 
-    // Estilo "Beginner": Texto debajo del video, no flotando complicado
-    // Pero el HTML tiene estructura para overlay. Vamos a hacerlo simple.
+    // Default: Video Left, Text Right
+    section {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-direction: row;
 
-    .contenido-sobre-video {
-        background-color: rgba(0, 0, 0, 0.6); // Fondo oscuro semitransparente
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: -50px; // Hack para subirlo un poco sobre el video
-        position: relative;
-        z-index: 10;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        @include tablet {
+            flex-direction: column !important; // Force stack regardless of even/odd
+        }
 
         @include mobile {
-            width: 95%; // Mobile width adjustment
-            margin-top: -20px; // Less overlap on mobile
+            flex-direction: column !important;
         }
+    }
+
+    // Alternating Layout: Text Left, Video Right
+    &:nth-of-type(even) {
+        section {
+            flex-direction: row-reverse;
+            text-align: right;
+
+            @include tablet {
+                text-align: center;
+            }
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+    }
+
+    .video-fondo {
+        width: 50%;
+        margin-bottom: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); // Better shadow
+        border-radius: 10px;
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .tarjeta {
+        position: static;
+        width: 50%;
+        height: auto;
+        transform: none;
+
+        background-color: transparent;
+        background-image: none;
+        border: none;
+
+        color: $color-negro;
+        font-family: 'Arial', sans-serif; // Cleaner sans-serif for reading
+        font-size: 1.1rem; // Readable size
+        line-height: 1.8;
+        text-transform: none;
+        font-weight: normal;
+        text-align: left;
+
+        margin: 0;
+        padding: 20px;
+        opacity: 1;
+
+        @include tablet {
+            width: 100%;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        @include mobile {
+            width: 100%;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #555; // Softer text color
+        }
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .contenido-sobre-video {
+        @extend .tarjeta;
     }
 }
 
@@ -118,16 +193,29 @@
 .contenedor-sucursales {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: $espacio-grande;
+    background-color: $color-fondo;
+
 
     .tarjeta-sucursal {
         text-align: left;
+        padding: $espacio-medio;
+        border-radius: 25px;
+        border: 0.2px solid $color-negro;
 
         h3 {
             color: $color-primario;
-            font-size: 1.2rem;
+            font-family: $fuente-secundaria;
+            font-size: 2rem;
         }
     }
+
+    .sucursal-destacada {
+        color: $color-peligro;
+    }
 }
+
+
 
 // Animaciones
 .animacion-fade-in {
@@ -142,4 +230,93 @@
     100% {
         opacity: 1;
     }
+}
+
+// FOOTER
+
+footer {
+    .img-ws {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .contenedor-ws {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .img-ws {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .texto-animado {
+        opacity: 0;
+        transform: translateX(100%);
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        margin-right: 60px;
+        animation: animacion 10.5s ease forwards;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+
+    @keyframes animacion {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        5% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        95% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    .contenedor-ws:hover {
+        .texto-animado {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes animacion-hover {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
 }
