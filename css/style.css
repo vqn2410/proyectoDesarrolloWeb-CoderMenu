@@ -435,10 +435,14 @@ footer .enlaces-footer a:hover {
   margin: 40px 0;
 }
 .contenedor-titulo-bienvenidos h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.2;
+  word-wrap: break-word;
+  padding: 0 10px;
 }
 .contenedor-titulo-bienvenidos h1 .titulo-destacado {
   color: #ffc107;
+  display: inline-block;
 }
 
 .lista-categorias {
