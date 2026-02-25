@@ -1,0 +1,171 @@
+// Componentes
+
+// Botones
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-primario;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    @include borde-redondeado;
+    text-align: center;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: $color-verde;
+    }
+}
+
+.boton-ver-mas,
+.boton-comprar {
+    @extend .boton;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.boton-ver-mas {
+    background-color: $color-blanco;
+    color: black;
+    border: 1px solid $color-primario;
+
+    &:hover {
+        background-color: $color-secundario;
+        color: black;
+        border: solid 1px $color-secundario;
+    }
+}
+
+.boton-agregar {
+    @extend .boton;
+    width: 100%;
+    background-color: $color-secundario;
+    color: black;
+
+    &:hover {
+        background-color: $color-peligro;
+        color: white;
+    }
+}
+
+.boton-bloque {
+    width: 100%;
+}
+
+.boton-categoria {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid $color-blanco;
+    color: $color-blanco;
+    border-radius: 20px;
+    margin: 5px;
+
+    &:hover {
+        background-color: $color-primario;
+        color: $color-secundario;
+        border-color: $color-secundario;
+    }
+}
+
+// Tarjetas
+.tarjeta {
+    padding: $espacio-medio;
+    border: 1px solid $color-gris;
+    @include borde-redondeado;
+    margin-bottom: $espacio-medio;
+}
+
+.tarjeta-productos {
+    @extend .tarjeta;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    img {
+        margin-bottom: $espacio-chico;
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: $fuente-secundaria;
+    }
+
+    .precio {
+        font-size: 30px;
+        color: $color-primario;
+        font-weight: normal;
+        margin: 10px 0;
+        font-family: $fuente-secundaria;
+        display: inline-block;
+        padding: 4px 10px;
+        border: 2px solid $color-secundario;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: $color-secundario;
+            color: black;
+            border-color: $color-secundario;
+        }
+    }
+
+
+    .destacar-text-color-rojo {
+        color: $color-peligro;
+    }
+
+}
+
+
+.cuadricula-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(https://i.postimg.cc/tCVvMjGf/Coder_Menu_img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f8f9fa;
+    min-height: 250px;
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+// Formularios
+.grupo-formulario {
+    margin-bottom: 15px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .input-formulario,
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $color-gris;
+        border-radius: 3px;
+    }
+}
+
+.selector-comida {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid $color-gris;
+    border-radius: 3px;
+}

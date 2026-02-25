@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📌 Proyecto Desarrollo Web
 
 ## 📖 Descripción
@@ -74,3 +75,40 @@ El proyecto fue organizado de manera modular utilizando:
 Nicolás Vergara  
 Proyecto académico – Desarrollo Web | Coder House
 
+=======
+# Desarrollo Web – Coder House
+
+Este repositorio corresponde a una **entrega académica** realizada en el marco de la carrera de **Desarrollo Web** de **Coder House**.
+
+## 📚 Información del curso
+- **Institución:** Coder House  
+- **Carrera:** Desarrollo Web  
+- **Comisión:** 87925  
+- **Entrega:** Proyecto práctico
+
+## 🧩 Descripción del proyecto
+El proyecto forma parte de las actividades evaluativas del curso y tiene como objetivo aplicar los conocimientos adquiridos en las primeras unidades, incluyendo:
+
+- Estructura básica de un documento HTML  
+- Uso correcto de etiquetas semánticas  
+- Organización del contenido  
+- Buenas prácticas iniciales de desarrollo web  
+
+El archivo principal del proyecto es `index.html`, donde se desarrolla la estructura base del sitio.
+
+## 🛠️ Tecnologías utilizadas
+- HTML5  
+- CSS  
+- Bootstrap  
+
+## 🎯 Objetivo
+Poner en práctica los conceptos fundamentales del desarrollo web, sentando las bases para futuros proyectos más complejos que incorporen estilos, diseño responsivo e interactividad.
+
+## ℹ️ Aclaración
+Este proyecto fue desarrollado utilizando **HTML, CSS y Bootstrap**.  
+Al momento de la entrega, **aún no se han incorporado contenidos de JavaScript, React ni desarrollo Backend** dentro de la cursada.
+
+---
+
+📌 *Proyecto realizado con fines educativos como parte de la cursada en Coder House.*
+>>>>>>> 9241704fb06ca7375067ccbcc7d46eb291cff7b2
