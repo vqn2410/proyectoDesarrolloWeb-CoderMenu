@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
 // Componentes
 
 // Botones
@@ -5,18 +8,18 @@
 .boton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: $color-primario;
+    background-color: vars.$color-primario;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    @include borde-redondeado;
+    @include mix.borde-redondeado;
     text-align: center;
     transition: background 0.3s;
 
     &:hover {
-        background-color: $color-verde;
+        background-color: vars.$color-verde;
     }
 }
 
@@ -28,25 +31,25 @@
 }
 
 .boton-ver-mas {
-    background-color: $color-blanco;
+    background-color: vars.$color-blanco;
     color: black;
-    border: 1px solid $color-primario;
+    border: 1px solid vars.$color-primario;
 
     &:hover {
-        background-color: $color-secundario;
+        background-color: vars.$color-secundario;
         color: black;
-        border: solid 1px $color-secundario;
+        border: solid 1px vars.$color-secundario;
     }
 }
 
 .boton-agregar {
     @extend .boton;
     width: 100%;
-    background-color: $color-secundario;
+    background-color: vars.$color-secundario;
     color: black;
 
     &:hover {
-        background-color: $color-peligro;
+        background-color: vars.$color-peligro;
         color: white;
     }
 }
@@ -58,24 +61,24 @@
 .boton-categoria {
     display: inline-block;
     padding: 8px 15px;
-    border: 1px solid $color-blanco;
-    color: $color-blanco;
+    border: 1px solid vars.$color-blanco;
+    color: vars.$color-blanco;
     border-radius: 20px;
     margin: 5px;
 
     &:hover {
-        background-color: $color-primario;
-        color: $color-secundario;
-        border-color: $color-secundario;
+        background-color: vars.$color-primario;
+        color: vars.$color-secundario;
+        border-color: vars.$color-secundario;
     }
 }
 
 // Tarjetas
 .tarjeta {
-    padding: $espacio-medio;
-    border: 1px solid $color-gris;
-    @include borde-redondeado;
-    margin-bottom: $espacio-medio;
+    padding: vars.$espacio-medio;
+    border: 1px solid vars.$color-gris;
+    @include mix.borde-redondeado;
+    margin-bottom: vars.$espacio-medio;
 }
 
 .tarjeta-productos {
@@ -84,40 +87,39 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
 
     img {
-        margin-bottom: $espacio-chico;
+        margin-bottom: vars.$espacio-chico;
         border-radius: 5px;
     }
 
     h3 {
         font-size: 2.5rem;
         font-weight: bold;
-        font-family: $fuente-secundaria;
+        font-family: vars.$fuente-secundaria;
     }
 
     .precio {
         font-size: 30px;
-        color: $color-primario;
+        color: vars.$color-primario;
         font-weight: normal;
         margin: 10px 0;
-        font-family: $fuente-secundaria;
+        font-family: vars.$fuente-secundaria;
         display: inline-block;
         padding: 4px 10px;
-        border: 2px solid $color-secundario;
+        border: 2px solid vars.$color-secundario;
         border-radius: 6px;
 
         &:hover {
-            background-color: $color-secundario;
+            background-color: vars.$color-secundario;
             color: black;
-            border-color: $color-secundario;
+            border-color: vars.$color-secundario;
         }
     }
 
 
     .destacar-text-color-rojo {
-        color: $color-peligro;
+        color: vars.$color-peligro;
     }
 
 }
@@ -131,7 +133,7 @@
     background-repeat: no-repeat;
     color: #f8f9fa;
     min-height: 250px;
-    font-family: "BBH Bartle", sans-serif;
+    font-family: vars.$fuente-titulos;
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
@@ -157,7 +159,7 @@
     .form-control {
         width: 100%;
         padding: 10px;
-        border: 1px solid $color-gris;
+        border: 1px solid vars.$color-gris;
         border-radius: 3px;
     }
 }
@@ -166,6 +168,6 @@
     width: 100%;
     padding: 8px;
     margin: 5px 0;
-    border: 1px solid $color-gris;
+    border: 1px solid vars.$color-gris;
     border-radius: 3px;
 }

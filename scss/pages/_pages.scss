@@ -1,9 +1,12 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
 // Estilos de Páginas Específicas
 
 // HOME
 .contenedor-titulo-bienvenidos {
     text-align: center;
-    margin: $espacio-grande 0;
+    margin: vars.$espacio-grande 0;
     width: 100%;
     max-width: 100vw;
 
@@ -16,18 +19,17 @@
         margin: 0 auto;
 
         .bienvenido {
-            font-family: $fuente-secundaria;
+            font-family: vars.$fuente-secundaria;
             font-weight: bold;
-            color: red($color: #000000)
         }
 
         .titulo-destacado {
-            color: $color-secundario;
+            color: vars.$color-secundario;
             display: inline-block;
         }
 
         .titulo-coder {
-            color: $color-primario;
+            color: vars.$color-primario;
             display: inline-block;
         }
     }
@@ -38,35 +40,35 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: $espacio-medio 0;
+    margin: vars.$espacio-medio 0;
 
 }
 
 .contenedor-titulo-seccion {
-    @include titulo-seccion;
+    @include mix.titulo-seccion;
     font-size: 1.2rem;
-    background-color: $color-secundario;
-    color: $color-negro;
+    background-color: vars.$color-secundario;
+    color: vars.$color-negro;
 
     .destacados {
-        color: $color-blanco;
+        color: vars.$color-blanco;
         display: inline-block;
         padding: 4px 10px;
-        border: 2px solid $color-secundario;
+        border: 2px solid vars.$color-secundario;
         border-radius: 6px;
-        background-color: $color-peligro;
+        background-color: vars.$color-peligro;
     }
 }
 
 .contenedor-titulo-pregunta {
-    @include titulo-seccion;
+    @include mix.titulo-seccion;
     font-size: 1.2rem;
-    background-color: $color-negro;
+    background-color: vars.$color-negro;
     color: white;
 
     h2 {
-        font-family: $fuente-secundaria;
-        font-weight: none;
+        font-family: vars.$fuente-secundaria;
+        font-weight: normal;
         color: white;
     }
 }
@@ -83,7 +85,7 @@
         display: inline-block;
         width: 30%;
 
-        @include mobile {
+        @include mix.mobile {
             width: 100%;
         }
     }
@@ -100,7 +102,7 @@
 }
 
 .contenido-principal-nosotros {
-    margin-bottom: $espacio-grande * 2;
+    margin-bottom: vars.$espacio-grande * 2;
 
     section {
         display: flex;
@@ -108,11 +110,11 @@
         gap: 40px;
         flex-direction: row;
 
-        @include tablet {
+        @include mix.tablet {
             flex-direction: column !important;
         }
 
-        @include mobile {
+        @include mix.mobile {
             flex-direction: column !important;
         }
     }
@@ -122,11 +124,11 @@
             flex-direction: row-reverse;
             text-align: right;
 
-            @include tablet {
+            @include mix.tablet {
                 text-align: center;
             }
 
-            @include mobile {
+            @include mix.mobile {
                 text-align: center;
             }
         }
@@ -138,12 +140,12 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
 
-        @include tablet {
+        @include mix.tablet {
             width: 100%;
             margin-bottom: 20px;
         }
 
-        @include mobile {
+        @include mix.mobile {
             width: 100%;
             margin-bottom: 20px;
         }
@@ -159,7 +161,7 @@
         background-image: none;
         border: none;
 
-        color: $color-negro;
+        color: vars.$color-negro;
         font-family: 'Arial', sans-serif;
         font-size: 1.1rem;
         line-height: 1.8;
@@ -171,13 +173,13 @@
         padding: 20px;
         opacity: 1;
 
-        @include tablet {
+        @include mix.tablet {
             width: 100%;
             text-align: center;
             padding: 0 10px;
         }
 
-        @include mobile {
+        @include mix.mobile {
             width: 100%;
             text-align: center;
             padding: 0 10px;
@@ -211,25 +213,25 @@
 .contenedor-sucursales {
     text-align: center;
     margin-top: 50px;
-    margin-bottom: $espacio-grande;
-    background-color: $color-fondo;
+    margin-bottom: vars.$espacio-grande;
+    background-color: vars.$color-fondo;
 
 
     .tarjeta-sucursal {
         text-align: left;
-        padding: $espacio-medio;
+        padding: vars.$espacio-medio;
         border-radius: 25px;
-        border: 0.2px solid $color-negro;
+        border: 0.2px solid vars.$color-negro;
 
         h3 {
-            color: $color-primario;
-            font-family: $fuente-secundaria;
+            color: vars.$color-primario;
+            font-family: vars.$fuente-secundaria;
             font-size: 2rem;
         }
     }
 
     .sucursal-destacada {
-        color: $color-peligro;
+        color: vars.$color-peligro;
     }
 }
 
@@ -266,7 +268,7 @@ footer {
         cursor: pointer;
     }
 
-    @include mobile {
+    @include mix.mobile {
         .contenedor-ws {
             bottom: 90px;
             right: 10px;
@@ -274,7 +276,7 @@ footer {
         }
     }
 
-    @include tablet {
+    @include mix.tablet {
         .contenedor-ws {
             bottom: 90px;
             right: 10px;

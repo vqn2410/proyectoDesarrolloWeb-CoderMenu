@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'pages';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'base/base';
+@use 'layout/layout';
+@use 'components/components';
+@use 'pages/pages';

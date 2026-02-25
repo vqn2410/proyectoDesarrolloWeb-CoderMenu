@@ -1,7 +1,10 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
 // Layout General
 
 header {
-    background-color: $color-primario;
+    background-color: vars.$color-primario;
     color: white;
 
     .contenedor-navegacion {
@@ -16,33 +19,33 @@ header {
         left: 0;
         padding: 15px 20px;
         z-index: 1000;
-        background-color: $color-primario;
+        background-color: vars.$color-primario;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-        @include tablet {
+        @include mix.tablet {
             justify-content: center;
         }
 
-        @include mobile {
+        @include mix.mobile {
             justify-content: center;
         }
     }
 
     .logo {
         color: white;
-        font-family: $fuente-titulos;
+        font-family: vars.$fuente-titulos;
         font-size: 28px;
         font-weight: bold;
 
         .titulo-destacado {
-            color: $color-secundario;
+            color: vars.$color-secundario;
         }
 
-        @include tablet {
+        @include mix.tablet {
             text-align: center;
         }
 
-        @include mobile {
+        @include mix.mobile {
             text-align: center;
         }
     }
@@ -59,7 +62,7 @@ header {
 
     /* ÍCONO 🛒 */
     .icono-carrito {
-        background-color: $color-primario;
+        background-color: vars.$color-primario;
         color: white;
         width: 50px;
         height: 50px;
@@ -127,7 +130,7 @@ nav {
     .menu-navegacion {
         display: flex;
         justify-content: flex-end;
-        gap: $espacio-medio;
+        gap: vars.$espacio-medio;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -137,7 +140,7 @@ nav {
                 display: flex;
                 align-items: center;
                 gap: 6px;
-                color: $color-blanco;
+                color: vars.$color-blanco;
                 font-size: 18px;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -146,21 +149,21 @@ nav {
 
                 &:hover,
                 &.active {
-                    color: $color-secundario;
+                    color: vars.$color-secundario;
                 }
             }
         }
     }
 
     // TABLET
-    @include tablet {
+    @include mix.tablet {
         .menu-navegacion {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
             flex-direction: row;
-            background-color: $color-primario;
+            background-color: vars.$color-primario;
             justify-content: space-around;
             padding: 8px 0;
             z-index: 1000;
@@ -169,14 +172,14 @@ nav {
         .menu-navegacion li a {
             flex-direction: column;
             font-size: 12px;
-            color: $color-blanco;
+            color: vars.$color-blanco;
 
             i {
                 font-size: 20px;
             }
 
             &.active {
-                color: $color-secundario;
+                color: vars.$color-secundario;
             }
         }
     }
@@ -185,14 +188,14 @@ nav {
 
 
 // MOBILE
-@include mobile {
+@include mix.mobile {
     nav .menu-navegacion {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         flex-direction: row;
-        background-color: $color-primario;
+        background-color: vars.$color-primario;
         justify-content: center;
         gap: 30px;
         padding: 8px 0;
@@ -209,7 +212,7 @@ nav {
         }
 
         &.active {
-            color: $color-secundario;
+            color: vars.$color-secundario;
         }
     }
 
@@ -217,21 +220,21 @@ nav {
 
 
 footer {
-    background-color: $color-secundario;
+    background-color: vars.$color-secundario;
     color: white;
     text-align: center;
-    padding: $espacio-grande 0;
-    margin-top: $espacio-grande;
+    padding: vars.$espacio-grande 0;
+    margin-top: auto;
 
     .enlaces-footer {
-        margin-top: $espacio-medio;
+        margin-top: vars.$espacio-medio;
 
         a {
             margin: 0 10px;
             color: white;
 
             &:hover {
-                color: $color-primario;
+                color: vars.$color-primario;
             }
         }
     }
@@ -241,17 +244,17 @@ footer {
 // Grid Systems
 .cuadricula {
     display: grid;
-    gap: $espacio-medio;
+    gap: vars.$espacio-medio;
 }
 
 .cuadricula-productos {
     grid-template-columns: repeat(3, 1fr);
 
-    @include tablet {
+    @include mix.tablet {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include mobile {
+    @include mix.mobile {
         grid-template-columns: 1fr;
     }
 }
@@ -259,16 +262,16 @@ footer {
 .cuadricula-2 {
     grid-template-columns: 1fr 1fr;
 
-    @include tablet {
+    @include mix.tablet {
         grid-template-columns: 1fr;
     }
 
-    @include mobile {
+    @include mix.mobile {
         grid-template-columns: 1fr;
     }
 }
 
 .cuadricula-img {
     text-align: center;
-    margin-bottom: $espacio-medio;
+    margin-bottom: vars.$espacio-medio;
 }

@@ -1,3 +1,5 @@
+@use 'variables' as vars;
+
 // Mixins Básicos
 @mixin flex-centro {
     display: flex;
@@ -28,11 +30,11 @@
     }
 
     .destacados {
-        color: $color-secundario;
+        color: vars.$color-secundario;
     }
 
     .titulo-destacado {
-        color: $color-secundario;
+        color: vars.$color-secundario;
     }
 }
 
