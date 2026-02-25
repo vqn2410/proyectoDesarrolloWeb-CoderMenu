@@ -1,0 +1,312 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+// Layout General
+
+header {
+    background-color: vars.$color-primario;
+    color: white;
+
+    .contenedor-navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        padding: 15px 20px;
+        z-index: 1000;
+        background-color: vars.$color-primario;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        @include mix.tablet {
+            justify-content: center;
+        }
+
+        @include mix.mobile {
+            justify-content: center;
+        }
+    }
+
+    .logo {
+        color: white;
+        font-family: vars.$fuente-titulos;
+        font-size: 28px;
+        font-weight: bold;
+
+        .titulo-destacado {
+            color: vars.$color-secundario;
+        }
+
+        @include mix.tablet {
+            text-align: center;
+        }
+
+        @include mix.mobile {
+            text-align: center;
+        }
+    }
+
+    .contenedor-carrito {
+        position: fixed;
+        top: 15px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        z-index: 1001;
+        transform: translateY(250%);
+    }
+
+    /* ÍCONO 🛒 */
+    .icono-carrito {
+        background-color: vars.$color-primario;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px 0 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+
+    .texto-animado {
+        position: absolute;
+        right: 50px;
+        opacity: 0;
+        transform: translateX(100%);
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 8px 14px;
+        border-radius: 20px;
+        pointer-events: none;
+
+        animation: carrito-auto 10.5s ease forwards;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes carrito-auto {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        5% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        95% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    .contenedor-carrito:hover .texto-animado {
+        opacity: 1;
+        transform: translateX(0);
+        animation: none;
+    }
+
+}
+
+nav {
+
+    // DESKTOP
+    .menu-navegacion {
+        display: flex;
+        justify-content: flex-end;
+        gap: vars.$espacio-medio;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                color: vars.$color-blanco;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 10px;
+
+                &:hover,
+                &.active {
+                    color: vars.$color-secundario;
+                }
+            }
+        }
+    }
+
+    // TABLET
+    @include mix.tablet {
+        .menu-navegacion {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            flex-direction: row;
+            background-color: vars.$color-primario;
+            justify-content: space-around;
+            padding: 8px 0;
+            z-index: 1000;
+        }
+
+        .menu-navegacion li a {
+            flex-direction: column;
+            font-size: 12px;
+            color: vars.$color-blanco;
+
+            i {
+                font-size: 20px;
+            }
+
+            &.active {
+                color: vars.$color-secundario;
+            }
+        }
+    }
+}
+
+
+
+// MOBILE
+@include mix.mobile {
+    nav .menu-navegacion {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        background-color: vars.$color-primario;
+        justify-content: center;
+        gap: 30px;
+        padding: 8px 0;
+        z-index: 1000;
+    }
+
+    nav .menu-navegacion li a {
+        flex-direction: column;
+        font-size: 12px;
+        color: white;
+
+        i {
+            font-size: 20px;
+        }
+
+        &.active {
+            color: vars.$color-secundario;
+        }
+    }
+
+}
+
+
+footer {
+    background-color: vars.$color-secundario;
+    color: vars.$color-negro;
+    text-align: center;
+    padding: vars.$espacio-grande 0;
+    margin-top: auto;
+
+    @include mix.tablet {
+        padding-bottom: 100px; // Spacing for bottom navigation
+    }
+
+    @include mix.mobile {
+        padding-bottom: 100px; // Spacing for bottom navigation
+    }
+
+    .enlaces-footer {
+        margin-top: vars.$espacio-medio;
+
+        a {
+            margin: 0 10px;
+            color: vars.$color-negro;
+
+            &:hover {
+                color: vars.$color-blanco;
+            }
+        }
+    }
+
+    .contenedor-ws {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1001;
+
+        @include mix.tablet {
+            bottom: 90px; // Above navigation
+            right: 15px;
+        }
+
+        @include mix.mobile {
+            bottom: 90px; // Above navigation
+            right: 15px;
+        }
+    }
+
+    .img-ws {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Grid Systems
+.cuadricula {
+    display: grid;
+    gap: vars.$espacio-medio;
+}
+
+.cuadricula-productos {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mix.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mix.mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cuadricula-2 {
+    grid-template-columns: 1fr 1fr;
+
+    @include mix.tablet {
+        grid-template-columns: 1fr;
+    }
+
+    @include mix.mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cuadricula-img {
+    text-align: center;
+    margin-bottom: vars.$espacio-medio;
+}

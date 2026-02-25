@@ -1,0 +1,52 @@
+@use 'variables' as vars;
+
+// Mixins Básicos
+@mixin flex-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin borde-redondeado {
+    border-radius: 5px;
+}
+
+@mixin sombra-suave {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@mixin titulo-seccion {
+    text-align: center;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    border-radius: 5px;
+
+    h2 {
+        margin-top: 20px;
+        display: inline-block;
+        border-bottom: 3px solid white;
+        padding-bottom: 5px;
+    }
+
+    .destacados {
+        color: vars.$color-secundario;
+    }
+
+    .titulo-destacado {
+        color: vars.$color-secundario;
+    }
+}
+
+// Media Query simple
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) and (min-width: 768px) {
+        @content;
+    }
+}

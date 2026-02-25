@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+// Componentes
+
+// Botones
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: vars.$color-primario;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    @include mix.borde-redondeado;
+    text-align: center;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: vars.$color-verde;
+    }
+}
+
+.boton-ver-mas,
+.boton-comprar {
+    @extend .boton;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.boton-ver-mas {
+    background-color: vars.$color-blanco;
+    color: black;
+    border: 1px solid vars.$color-primario;
+
+    &:hover {
+        background-color: vars.$color-secundario;
+        color: black;
+        border: solid 1px vars.$color-secundario;
+    }
+}
+
+.boton-agregar {
+    @extend .boton;
+    width: 100%;
+    background-color: vars.$color-secundario;
+    color: black;
+
+    &:hover {
+        background-color: vars.$color-peligro;
+        color: white;
+    }
+}
+
+.boton-bloque {
+    width: 100%;
+}
+
+.boton-categoria {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid vars.$color-blanco;
+    color: vars.$color-blanco;
+    border-radius: 20px;
+    margin: 5px;
+
+    &:hover {
+        background-color: vars.$color-primario;
+        color: vars.$color-secundario;
+        border-color: vars.$color-secundario;
+    }
+}
+
+// Tarjetas
+.tarjeta {
+    padding: vars.$espacio-medio;
+    border: 1px solid vars.$color-gris;
+    @include mix.borde-redondeado;
+    margin-bottom: vars.$espacio-medio;
+}
+
+.tarjeta-productos {
+    @extend .tarjeta;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+        margin-bottom: vars.$espacio-chico;
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: vars.$fuente-secundaria;
+    }
+
+    .precio {
+        font-size: 30px;
+        color: vars.$color-primario;
+        font-weight: normal;
+        margin: 10px 0;
+        font-family: vars.$fuente-secundaria;
+        display: inline-block;
+        padding: 4px 10px;
+        border: 2px solid vars.$color-secundario;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: vars.$color-secundario;
+            color: black;
+            border-color: vars.$color-secundario;
+        }
+    }
+
+
+    .destacar-text-color-rojo {
+        color: vars.$color-peligro;
+    }
+
+}
+
+
+.cuadricula-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(https://i.postimg.cc/tCVvMjGf/Coder_Menu_img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f8f9fa;
+    min-height: 250px;
+    font-family: vars.$fuente-titulos;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+// Formularios
+.grupo-formulario {
+    margin-bottom: 15px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .input-formulario,
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid vars.$color-gris;
+        border-radius: 3px;
+    }
+}
+
+.selector-comida {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid vars.$color-gris;
+    border-radius: 3px;
+}

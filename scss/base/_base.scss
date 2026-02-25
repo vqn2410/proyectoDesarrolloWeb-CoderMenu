@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as vars;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: vars.$fuente-principal;
+    background-color: vars.$color-fondo;
+    color: vars.$color-texto;
+    line-height: 1.5;
+    padding-top: 100px;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2,
+h3 {
+    font-family: vars.$fuente-titulos;
+    color: vars.$color-primario;
+    margin-bottom: vars.$espacio-medio;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

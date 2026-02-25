@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap" rel="stylesheet">
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Imagenes creadas con Gemini
+    https://gemini.google.com/share/ac91d2eacfde -->
+
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="contenedor contenedor-navegacion">
+            <a href="../index.html" class="logo">Coder<span class="titulo-destacado">Menu</span></a>
+
+            <nav>
+                <ul class="menu-navegacion">
+                    <li class="enlace-navegacion">
+                        <a href="../index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="enlace-navegacion">
+                        <a href="nosotros.html">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Nosotros</span>
+                        </a>
+                    </li>
+                    <li class="enlace-navegacion">
+                        <a href="contacto.html" class="active">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contenedor-carrito">
+            <a href="#" class="icono-carrito">🛒</a>
+            <span class="texto-animado">$0.00 ARS</span>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-principal">
+        <section class="container contenedor-contacto-grid">
+            <div class="row align-items-center g-4">
+                <!-- Imagen Decorativa -->
+                <div class="col-12 col-md-6">
+                    <div class="contenedor-imagen-contacto">
+                        <img src="https://i.postimg.cc/tCVvMjGf/Coder_Menu_img.jpg"
+                            class="imagen-responsiva rounded shadow" alt="Imagen de contacto">
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-12 col-md-6">
+                    <div class="tarjeta-contacto padding-lg">
+                        <h1 class="tarjeta-bienvenido mb-md" style="font-size: 2rem;">Contacto</h1>
+                        <p class="text-center mb-md">Estamos para ayudarte. Envíanos tu consulta.</p>
+
+                        <form class="ancho-completo">
+                            <div class="grupo-formulario">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="input-formulario" id="nombre" placeholder="Ej: Juan Pérez"
+                                    required>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="input-formulario" id="email" placeholder="nombre@ejemplo.com"
+                                    required>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="input-formulario" id="mensaje" rows="5"
+                                    placeholder="¿En qué podemos ayudarte?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="boton boton-bloque w-100">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contenedor-sucursales">
+                <h2>Sucursales</h2>
+                <p>Encontranos en nuestras sucursales</p>
+                <div class="cuadricula cuadricula-2">
+                    <div class="tarjeta-sucursal">
+                        <h3>Sucursal <span class="sucursal-destacada">Springfield Sur</span></h3>
+                        <p>Dirección: Av. Siempre Viva 742 - Springfield</p>
+                        <p>Teléfono: 11-2345-6789</p>
+                        <p>Horario: Lunes a Viernes de 9 a 18 hs</p>
+                    </div>
+                    <div class="tarjeta-sucursal">
+                        <h3>Sucursal <span class="sucursal-destacada">Springfield Norte</span></h3>
+                        <p>Dirección: Calle falsa 123 - Springfield</p>
+                        <p>Teléfono: 11-2345-7777</p>
+                        <p>Horario: Lunes a Viernes de 9 a 18 hs</p>
+                    </div>
+                    <div class="tarjeta-sucursal">
+                        <h3>Sucursal <span class="sucursal-destacada">Shelbyville</span></h3>
+                        <p>Dirección: Av. Siempre Viva 742 - Shelbyville</p>
+                        <p>Teléfono: 11-2345-6677</p>
+                        <p>Horario: Lunes a Viernes de 9 a 18 hs</p>
+                    </div>
+                    <div class="tarjeta-sucursal">
+                        <h3>Sucursal <span class="sucursal-destacada">Capital City</span></h3>
+                        <p>Dirección: Av. Los Pinos 123 - Capital City</p>
+                        <p>Teléfono: 11-2345-9876</p>
+                        <p>Horario: Lunes a Viernes de 9 a 18 hs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>© 2025 - NVproductions by Nicolas Vergara</p>
+            <div class="enlaces-footer">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contenedor-ws">
+                <a href="https://www.whatsapp.com" target="_blank"><img class="img-ws"
+                        src="https://i.postimg.cc/x8B63GFq/whatsapp-icon-free-png.webp" alt="icono de whatsapp"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
